@@ -1,0 +1,20 @@
+
+<a class="box" href={{category.url}}>
+  <div class ="homepage-category-box">
+    <div class ="category-image-wrapper">
+    {{#if category.uploaded_logo.url}}
+            {{cdn-img
+              src=category.uploaded_logo.url
+              class="homepage-category-image"
+              alt=""
+            }}
+          {{/if}}
+    </div>
+    <h2>{{dir-span category.name}}</h2>
+    <div class="homepage-category-box-count">
+      {{d-icon "lock"}}
+      <span class="category-name">{{dir-span category.topic_count}}</span>
+    </div>
+  </div>
+    
+</a>
