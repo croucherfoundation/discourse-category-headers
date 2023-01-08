@@ -9,14 +9,13 @@ export default {
       const idList = settings.featured_categories.split("|");
       const featuredCategories = idList.map(id => Category.findById(id));
 
-      api.registerConnectorClass("below-site-header", "categories-header", {
+      api.registerConnectorClass("above-main-container", "categories-header", {
         setupComponent(args, component) {
           api.onPageChange((url, title) => {
             if (url === "/" || url === "/latest" || url === "/new" || url === "/unread" || url === "/top") {
               $("html").addClass("categories-header");
               // add a class to the HTML tag for easy CSS targetting
               component.set("categories", featuredCategories);
-              console.log(featuredCategories);
             } else {
               // If the page doesn't match the urls above
               $("html").removeClass("categories-header");

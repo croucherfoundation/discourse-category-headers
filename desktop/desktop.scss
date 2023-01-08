@@ -1,7 +1,8 @@
 html.categories-header {
-  .below-site-header-outlet.categories-header {
+  .above-main-container-outlet.categories-header {
     .wrap.wrap-category-boxes{
       margin-top: 2em;
+      display: unset !important;
       .homepage-category-boxes{
         display: flex;
         flex-wrap: wrap;
