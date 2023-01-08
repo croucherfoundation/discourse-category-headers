@@ -2,7 +2,7 @@
   <div class="homepage-category-boxes">
   {{#each categories as |category|}}
     {{!-- {{categories-header-item category=category}} --}}
-          <a class="box" href={{category.url}}>
+      <a class="box" href={{category.url}}>
         <div class ="homepage-category-box">
           <div class ="category-image-wrapper">
           {{#if category.uploaded_logo.url}}
@@ -16,11 +16,9 @@
           <h2>{{dir-span category.name}}</h2>
           <div class="homepage-category-box-count">
             {{d-icon "far-comments"}}
-            
             <span class="category-name">{{dir-span category.topic_count}}</span>
           </div>
         </div>
-    
         </a>
   {{/each}}
   </div>
